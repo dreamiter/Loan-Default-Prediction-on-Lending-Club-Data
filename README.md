@@ -4,7 +4,7 @@ Course Project
 
 Columbia University
 
-STAT GR5232
+STAT GR5232 (Spring 2019)
 
 Author: Yiding Xie
 
