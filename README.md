@@ -12,9 +12,9 @@ Author: Yiding Xie
    - R
    - Python
 - Platform:
- + GCP VM (Linux)
+   - GCP VM (Linux)
 - ML Algorithms:
- + Logistic Regression
- + Random Forest
- + XGBoost
- + Averaging Ensemble
+   - Logistic Regression
+   - Random Forest
+   - XGBoost
+   - Averaging Ensemble
