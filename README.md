@@ -9,8 +9,8 @@ STAT GR5232
 Author: Yiding Xie
 
 - Software:
- + R
- + Python
+   - R
+   - Python
 - Platform:
  + GCP VM (Linux)
 - ML Algorithms:
