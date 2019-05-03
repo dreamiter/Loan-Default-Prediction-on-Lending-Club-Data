@@ -1,0 +1,65 @@
+---
+title: "GLM_Appendix"
+author: "Yiding Xie"
+date: "4/21/2019"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Set controls
+```{r}
+set.seed(2019)
+df.dir <- "/Users/timxie/Downloads/Issued Loan Data/"
+#df1.dir <- "/Users/timxie/Downloads/Test Loan Data/"
+wip.dir <- "/Users/timxie/Desktop/Columbia University/Spring 2019/STAT 5232/Project/WIP/"
+
+run.loadfile <- F
+```
+
+
+# Load files (Accepted)
+```{r}
+if (run.loadfile){
+  raw.data <- NULL
+  files <- list.files(df.dir)
+
+  system.time(for (f in files) {
+    temp <- read.csv(paste0(df.dir,f, collapse = ""), header = T, stringsAsFactors = F, skip = 1)
+    raw.data <- rbind(raw.data,temp)
+  })
+  rm(temp)
+  
+  save(raw.data, file = paste0(wip.dir,"raw_data.RData"))
+  write.csv(raw.data, file = paste0(wip.dir,"train_data.csv"))
+}
+```
+
+# Load files (test data)
+```{r}
+if (run.loadfile){
+  raw.data <- NULL
+  files <- list.files(df1.dir)
+
+  system.time(for (f in files) {
+    temp <- read.csv(paste0(df1.dir,f, collapse = ""), header = T, stringsAsFactors = F, skip = 1)
+    raw.data <- rbind(raw.data,temp)
+  })
+  rm(temp)
+  
+  #save(raw.data, file = paste0(wip.dir,"raw_data.RData"))
+  write.csv(raw.data, file = paste0(wip.dir,"test_data.csv"))
+}
+```
+
+
+
+
+
+
+
